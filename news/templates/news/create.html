@@ -1,0 +1,21 @@
+{% extends 'myapp/layout.html' %}
+
+{% block title %}
+	adding news
+{% endblock %}
+{% block content %}
+	<div class="features">
+        <h1>adding news</h1>
+       <form method="post">
+            {% csrf_token %}
+
+           {{ form.title }}<br>
+           {{ form.intro }}<br>
+           {{ form.full_text }}<br>
+           {{ form.date }}<br>
+
+           <span>{{ error }}</span>
+           <button class="btn btn-success" type="submit">ADD</button>
+       </form>
+    </div>
+{% endblock %}

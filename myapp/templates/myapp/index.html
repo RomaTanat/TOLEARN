@@ -1,0 +1,15 @@
+{% extends 'myapp/layout.html' %}
+
+{% block title %}
+	myproject
+{% endblock %}
+{% block content %}
+	<div class="features">
+        <h1>{{ title }}</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis libero minus perspiciatis placeat repudiandae voluptatibus? Alias eveniet, ex excepturi harum obcaecati porro quidem sed sequi unde voluptatum. Harum, quasi.</p>
+        <button class="btn btn-warning">About us</button>
+
+
+        {% include 'myapp/test.html' %}
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'myapp/layout.html' %}
+
+{% block title %}
+	news_myproject
+{% endblock %}
+{% block content %}
+	<div class="features">
+        <h1>news_myproject</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis libero minus perspiciatis placeat repudiandae voluptatibus? Alias eveniet, ex excepturi harum obcaecati porro quidem sed sequi unde voluptatum. Harum, quasi.</p>
+        <button class="btn btn-warning">About us</button>
+
+    {% if news %}
+        {% for el in news %}
+            <div class="alert alert-warning">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.intro }}</p>
+                <a href="{% url 'news_detail' el.id %}" class="btn btn-danger">check in</a>
+            </div>
+        {% endfor %}
+        {% else %}
+        <p>You have not news</p>
+    {% endif %}
+
+    </div>
+{% endblock %}
